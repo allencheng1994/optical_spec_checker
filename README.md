@@ -1,4 +1,4 @@
-#Optical Spec Checker
+##Optical Spec Checker
 
 Lots of people, they don't know how to define a reasonable optical spec. In this project, I want to create a checker to help people to exclude the unreasonable spec. 
 
