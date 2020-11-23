@@ -19,5 +19,5 @@ def ri_cos_fourth_power(angle_in_degree):
 
 
 if __name__ == '__main__':
-    pass
+    print(ri_cos_fourth_power(14.5))
 
