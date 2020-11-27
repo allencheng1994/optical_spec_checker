@@ -35,5 +35,5 @@ def tv_dist_real(op_dist_real_img_a, op_dist_real_img_b):
 
 
 if __name__ == '__main__':
-    # print(op_dist_real(real = 1.814, ideal = 1.714))
-    pass
+    print(op_dist_real(real = 1.814, ideal = math.tan(84.35/2/180*math.pi)*1.22))
+    
