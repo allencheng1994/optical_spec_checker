@@ -1,8 +1,3 @@
-<script type="text/javascript"
-   src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
 # Optical Spec Checker
 
 Lots of people, they don't know how to define a reasonable optical spec. In this project, I want to create a checker to help people to exclude the unreasonable spec. 
