@@ -5,9 +5,10 @@ This module is the collection of mtf calculation.
 
 import math
 
+
 def line_pair_ff(pixel_size):
     '''
-    You can use this function to calculate the full frequency of that 
+    You can use this function to calculate the full frequency of that
     pixel size.
 
     The unit of pixel size is um.
@@ -22,7 +23,7 @@ def line_pair_ff(pixel_size):
 
 def mtf_limit_circular(fno, wavelength, target_lp):
     '''
-    You can use this function to calculate the mtf limitation by giving f 
+    You can use this function to calculate the mtf limitation by giving f
     number, wavelength and target frequency.
 
     The unit of wavelength is um.
@@ -34,12 +35,12 @@ def mtf_limit_circular(fno, wavelength, target_lp):
     '''
     cutoff_lp = 1000 / fno / wavelength
     lp_ratio = target_lp / cutoff_lp
-    return 2 / math.pi * (math.acos(lp_ratio) - (lp_ratio) * (1 - lp_ratio**2)**0.5)
+    return 2 / math.pi * (math.acos(lp_ratio) - (lp_ratio) * (1 - lp_ratio ** 2) ** 0.5)
 
 
 def mtf_limit_circular_photopic(fno, target_lp):
     '''
-    You can use this function to calculate the mtf limitation by giving f 
+    You can use this function to calculate the mtf limitation by giving f
     number and target frequency.
 
     wavelength_rgb = [0.47, 0.51, 0.555, 0.61, 0.65]
@@ -58,4 +59,5 @@ def mtf_limit_circular_photopic(fno, target_lp):
 
 
 if __name__ == "__main__":
-    print(mtf_limit_circular_photopic(2.8, 112))
+    print(mtf_limit_circular_photopic(2.2 / math.cos(50 * math.pi / 180) ** 2, 124))
+    # print(mtf_limit_circular(2.84, 0.55, 112))

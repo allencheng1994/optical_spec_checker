@@ -37,5 +37,5 @@ def ri_fov_cra(half_fov, cra):
 
 
 if __name__ == '__main__':
-    print(ri_fov_cra(77 / 2, 34))
+    print(ri_cos_fourth_power(84 / 2))
 

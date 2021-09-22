@@ -8,7 +8,7 @@ import math
 
 def op_dist_real(real, ideal):
     '''
-    This function is going to estimate the optical distortion with real 
+    This function is going to estimate the optical distortion with real
     image height and ideal image height.
 
     ex:
@@ -22,7 +22,7 @@ def op_dist_real(real, ideal):
 
 def tv_dist_real(op_dist_real_img_a, op_dist_real_img_b):
     '''
-    This function is going to estimate the TV distortion with two optical 
+    This function is going to estimate the TV distortion with two optical
     distortion.
 
     ex:
@@ -34,6 +34,10 @@ def tv_dist_real(op_dist_real_img_a, op_dist_real_img_b):
     return op_dist_real_img_a - op_dist_real_img_b
 
 
+def distortion_cal(real, fov, efl):
+    return op_dist_real(real, efl * math.tan(fov / 2 / 180 * math.pi))
+
+
 if __name__ == '__main__':
-    print(op_dist_real(real = 1.814, ideal = math.tan(84.35/2/180*math.pi)*1.22))
-    
+    d = distortion_cal(real=2.056, fov=99.8, efl=1.74)
+    print(d)
